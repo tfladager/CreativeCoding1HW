@@ -1,0 +1,10 @@
+span{
+    color:aqua;
+    background-color: brown;
+}
+
+span.blueColor{
+    color:aqua;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
