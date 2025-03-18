@@ -1,0 +1,56 @@
+<html>
+    <title>Contact Us</title>
+    <head>
+        <script>
+            function getData()
+            {
+                var name = document.getElementById("txtName").value;
+                var email = document.getElementById("txtEmail").value;
+                var terms = document.getElementById("txtTerms").value;
+
+                document.getElementById("finalResult").innerHTML = "name: " + name + " email: " + email + "terms:" + terms;
+            }
+        
+        function checkAnswer()
+                var answer = document.getElementById("txtAnswer").value;
+            if(answer == actualAnswer)
+            {
+                document.getElementById("finalResult").innerHTML = "Thank you!";
+            }
+            else
+            {
+                document.getElementById("finalResult").innerHTML.style.Color = "red";
+            }
+        
+        </script>
+    </head>
+    <body>
+        Enter your information below. Please enter the word "fun" in the Terms box.
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="txtName" ></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="txtEmail" ></td>
+            </tr>
+            <tr>
+                <td>Terms</td>
+                <td><input type="text" id="txtTerms" ></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btnSubmit" onClick="getData();">Submit</button></td>
+            </tr>
+        </table>
+            <div id="finalResult"></div>
+          
+        </script>    
+                 
+    </body>
+
+    <br>
+    <a href="page3.html">Go to page 3</a> <br>
+    <br>
+    <br>
+ </html>
