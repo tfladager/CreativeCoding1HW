@@ -17,8 +17,8 @@ function draw()
     // eyes
     strokeWeight(10);
     fill(0,0,255);
-    point(200,75);
-    point(285,75);
+    circle(200,75);
+    circle(285,75);
 
     // nose
     point(245,90);
