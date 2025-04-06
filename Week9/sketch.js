@@ -51,8 +51,8 @@ function draw()
     // right leg
     rect(290,335,10,50);
     
-    fill(140);
-    textSize(30);
+    fill(255,255,255);
+    textSize(45);
     text("Tammi Fladager",270,500 );
 
 
