@@ -10,7 +10,7 @@ function draw()
     text("I'm trying!", 10,80);
 
     // head
-    fill(255, 204, 0);
+    fill(255, 255, 255);
     circle(250,100,175);
    
     // eyes
@@ -32,6 +32,7 @@ function draw()
     line(325,50,360,175);
     line(335,55,360,185);
     line(345,56,360,195);
+    
     // body
     fill(10, 24, 120);
     rect(200,185,100,150);
