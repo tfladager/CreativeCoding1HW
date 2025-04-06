@@ -15,7 +15,7 @@ function draw()
     triangle(220,75,250,25,280,75)
    
     // eyes
-    strokeWeight(30);
+    strokeWeight(20);
     fill(0,0,255);
     circle(200,175);
     circle(285,175);
