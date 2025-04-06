@@ -48,13 +48,13 @@ function draw()
     // left arm
     rect(150,195,50,10);
     // left leg
-    rect(200,335,10,50);
+    rect(300,335,10,50);
     // right leg
-    rect(290,335,10,50);
+    rect(390,335,10,50);
     
     fill(255,255,255);
     textSize(30);
-    text("Tammi Fladager",270,500 );
+    text("Tammi Fladager",270,600 );
 
 
 }
