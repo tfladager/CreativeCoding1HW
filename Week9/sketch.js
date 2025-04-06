@@ -35,7 +35,7 @@ function draw()
     line(345,30,360,195);
     
     // body
-    fill(10, 24, 120);
+    fill(155,0,0);
     rect(200,185,100,150);
     
     // decoration
