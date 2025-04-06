@@ -1,10 +1,8 @@
 function setup ()
 {
-    createCanvas (400,400);
+    createCanvas (300,500);
 }
-
 function draw () 
 {
     background(220);
-    console.log("hi");
 }
