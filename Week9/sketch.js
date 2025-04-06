@@ -11,17 +11,17 @@ function draw()
 
     // head
     fill(255, 255, 255);
-    circle(250,100,175);
+    circle(250,200,175);
     triangle(220,75,250,25,280,75)
    
     // eyes
-    strokeWeight(10);
+    strokeWeight(30);
     fill(0,0,255);
-    circle(200,75);
-    circle(285,75);
+    circle(200,175);
+    circle(285,175);
 
     // nose
-    point(245,90);
+    point(245,190);
     
     // mouth
     ellipse(245, 135, 30, 45)
