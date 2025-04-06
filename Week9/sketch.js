@@ -24,7 +24,7 @@ function draw()
     point(245,190);
     
     // mouth
-    ellipse(245, 135, 30, 45)
+    ellipse(245, 235, 30, 45)
 
     // hair
     line(200,110,200,130)
