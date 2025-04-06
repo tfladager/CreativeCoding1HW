@@ -6,12 +6,13 @@ function setup()
 function draw()
 {
     background(0,100,0);
-    textSize(22)
+    textSize(30)
     text("I'm trying!", 10,80);
 
     // head
     fill(255, 255, 255);
     circle(250,100,175);
+    triangle(220,75,250,25,280,75)
    
     // eyes
     strokeWeight(10);
@@ -40,7 +41,7 @@ function draw()
     
     // decoration
     fill(255);
-    triangle(220,320,250,220,280,320)
+    
     // right arm
     fill(10, 24, 120);
     rect(300,195,50,10);
@@ -52,7 +53,7 @@ function draw()
     rect(290,335,10,50);
     
     fill(255,255,255);
-    textSize(45);
+    textSize(30);
     text("Tammi Fladager",270,500 );
 
 
