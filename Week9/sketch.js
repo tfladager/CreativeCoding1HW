@@ -37,13 +37,13 @@ function draw()
     
     // body
     fill(155,0,0);
-    rect(200,185,100,150);
+    rect(200,285,100,150);
     
     // decoration
     fill(255);
     
     // right arm
-    fill(10, 24, 120);
+    fill(10, 24, 5);
     rect(300,295,50,10);
     // left arm
     rect(150,295,50,10);
