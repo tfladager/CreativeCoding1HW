@@ -5,7 +5,7 @@ function setup()
 
 function draw()
 {
-    background(0,0,255);
+    background(0,100,0);
     textSize(22)
     text("I'm trying!", 10,80);
 
@@ -15,7 +15,7 @@ function draw()
    
     // eyes
     strokeWeight(10);
-    fill(0);
+    fill(0,0,255);
     point(200,75);
     point(285,75);
 
