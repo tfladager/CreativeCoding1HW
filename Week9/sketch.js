@@ -11,7 +11,7 @@ function draw()
 
     // head
     fill(255, 255, 255);
-    circle(250,200,175);
+    circle(250,200,210);
     triangle(220,110,250,5,280,110)
    
     // eyes
