@@ -12,7 +12,7 @@ function draw()
     // head
     fill(255, 255, 255);
     circle(250,200,175);
-    triangle(320,75,350,25,380,75)
+    triangle(220,75,250,5,280,75)
    
     // eyes
     strokeWeight(20);
