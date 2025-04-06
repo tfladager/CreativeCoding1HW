@@ -5,7 +5,7 @@ function setup()
 
 function draw()
 {
-    background(120,45,78);
+    background(0,0,255);
     textSize(22)
     text("I'm trying!", 10,80);
 
@@ -31,8 +31,8 @@ function draw()
     line(140,180,175,40);
     line(150,185,175,30);
     line(325,50,360,175);
-    line(335,55,360,185);
-    line(345,56,360,195);
+    line(335,40,360,180);
+    line(345,30,360,195);
     
     // body
     fill(10, 24, 120);
