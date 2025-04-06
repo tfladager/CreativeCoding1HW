@@ -44,13 +44,13 @@ function draw()
     
     // right arm
     fill(10, 24, 120);
-    rect(300,195,50,10);
+    rect(300,295,50,10);
     // left arm
-    rect(150,195,50,10);
+    rect(150,295,50,10);
     // left leg
-    rect(300,335,10,50);
+    rect(200,435,10,50);
     // right leg
-    rect(390,335,10,50);
+    rect(290,435,10,50);
     
     fill(255,255,255);
     textSize(30);
