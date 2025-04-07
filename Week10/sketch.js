@@ -13,6 +13,10 @@ var hairX = 200;
 var hairY = 110;
 var hairDirection = 1;
 
+var size = 30;
+var count = 0;
+var sizeDirection = 2;
+
 
 function setup()
 {
@@ -22,13 +26,21 @@ function setup()
 function draw()
 {
     background(0,100,0);
-    textSize(30)
+    textSize(size);
+    size+= sizeDirection;
+    count++;
+    if (count > 3)
+    {
+        sizeDirection *=-1;
+        count = 0;
+
+    }
     text("I'm trying!", 10,80);
 
     // head
     fill(255, 255, 255);
     circle(250,200,210);
-    triangle(220,110,250,5,280,110)
+    triangle(220,110,250,5,280,110);
    
     // eyes
     strokeWeight(10);
