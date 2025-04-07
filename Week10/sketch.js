@@ -54,12 +54,7 @@ function draw()
     // alright, I could have made that move up and down but I really like the effect!
 
     // hair
-    line(hairX,hairY,200,130);
-    hairX += hairDirection;
-    if (hairX >= 220 || <= 190)
-    {
-        hairX *= -1;
-    }
+    line(200,110,200,130);
     line(130,175,175,50);
     line(140,180,175,40);
     line(150,185,175,30);
