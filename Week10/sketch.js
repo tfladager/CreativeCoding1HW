@@ -39,7 +39,7 @@ function draw()
     // nose
     point(noseX,noseY);
     noseX+=noseDirection;
-    if(noseX >=500 || noseX<= 75)
+    if (noseX >=500 || noseX<= 75)
     {
         noseDirection *= -1;
     }
@@ -56,7 +56,7 @@ function draw()
     // hair
     line(hairX,hairY,200,130);
     hairX += hairDirection;
-    if(hairX >= 220 || <=190)
+    if (hairX >= 220 || <= 190)
     {
         hairX *= -1;
     }
