@@ -5,7 +5,9 @@ var mouthDiameter2 = 45;
 var mouthDirection = 2;
 
 
-
+var noseX = 245;
+var noseY = 190;
+var noseDirection = 1;
 
 
 function setup()
@@ -31,7 +33,12 @@ function draw()
     circle(285,175,20);
 
     // nose
-    point(245,190);
+    point(noseX,noseY);
+    noseX+=noseDirection;
+    if(hoseX >=500 || noseX<= 75)
+    {
+        noseDirection *= -1;
+    }
     
     // mouth
     ellipse(245, 235, mouthDiameter1, 45);
