@@ -107,7 +107,7 @@ function draw()
     bodyY += bodyDirection;
     if (bodyY <=150 || bodyY>= 500)
     {
-        bodyDirection += -1;
+        bodyDirection *= -1;
     }
     
     // decoration
