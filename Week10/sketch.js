@@ -34,7 +34,17 @@ function draw()
     point(245,190);
     
     // mouth
-    ellipse(mouthX, mouthY, mouthDiameter1, mouthDiameter2)
+    ellipse(245, 235, mouthDiameter1, mouthDiameter2);
+    mouthDiameter1 += mouthDirection;
+    if (mouthDiameter1 <= 0 || mouthDiameter1 >=75 )
+    {
+        mouthDiameter1 *= -1;
+    }
+    mouthDiameter2 += mouthDirection;
+    if (mouthDiameter2 <= 0 || mouthDiameter2 >=75 )
+        {
+            mouthDiameter2 *= -1;
+        }
 
     // hair
     line(200,110,200,130)
