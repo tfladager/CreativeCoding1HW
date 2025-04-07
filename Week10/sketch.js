@@ -36,7 +36,7 @@ function draw()
     // mouth
     ellipse(245, 235, mouthDiameter1, 45);
     mouthDiameter1 += mouthDirection;
-    if (mouthDiameter1 <= 0 || mouthDiameter1 >=75 )
+    if (mouthDiameter1 >=0 || mouthDiameter1 <=75)
     {
         mouthDiameter1 *= -1;
     }
