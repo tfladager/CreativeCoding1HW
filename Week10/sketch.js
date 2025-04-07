@@ -17,6 +17,13 @@ var size = 30;
 var count = 0;
 var sizeDirection = 2;
 
+var triangleX = 220;
+var triangle2X = 250;
+var triangle3X = 280;
+var TriangleDirection1 = 3;
+var TriangleDirection2 =3;
+var TriangleDirection3 = 3;
+
 
 function setup()
 {
@@ -40,7 +47,23 @@ function draw()
     // head
     fill(255, 255, 255);
     circle(250,200,210);
-    triangle(220,110,250,5,280,110);
+    triangle(triangleX,110,triangle2X,5,triangle3X,110);
+    triangleX+= TriangleDirection1;
+    triangle2X += TriangleDirection2;
+    triangle3X += TriangleDirection3;
+    if (triangleX >=0 || triangleX<=300)
+    {
+        TriangleDirection1 *= -1;
+    }
+    if (triangle2X >=0 || triangle2X<=300)
+        {
+            TriangleDirection2 *= -1;
+        }
+        if (triangle3X >=0 || triangle3X<=300)
+            {
+                TriangleDirection3 *= -1;
+            }    
+
    
     // eyes
     strokeWeight(10);
