@@ -9,6 +9,10 @@ var noseX = 245;
 var noseY = 190;
 var noseDirection = 1;
 
+var hairX = 200;
+var hairY = 110;
+var hairDirection = 1;
+
 
 function setup()
 {
@@ -47,10 +51,15 @@ function draw()
     {
         mouthY *= -1;
     }
-    
+    // alright, I could have made that move up and down but I really like the effect!
 
     // hair
-    line(200,110,200,130)
+    line(hairX,hairY,200,130);
+    hairX += hairDirection;
+    if(hairX >= 220 || <=190)
+    {
+        hairX *= -1;
+    }
     line(130,175,175,50);
     line(140,180,175,40);
     line(150,185,175,30);
