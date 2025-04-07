@@ -20,9 +20,13 @@ var sizeDirection = 2;
 var triangleX = 220;
 var triangle2X = 250;
 var triangle3X = 280;
-var TriangleDirection1 = 2;
-var TriangleDirection2 =2;
-var TriangleDirection3 = 2;
+var TriangleDirection1 = 1;
+var TriangleDirection2 =1;
+var TriangleDirection3 = 1;
+
+var bodyX = 200;
+var bodyY = 280;
+var bodyDirection = 2;
 
 
 function setup()
@@ -53,15 +57,15 @@ function draw()
     triangle3X += TriangleDirection3;
     if (triangleX >=0 || triangleX<=500)
     {
-        TriangleDirection1 *= -1;
+        TriangleDirection1 += -1;
     }
     if (triangle2X >=0 || triangle2X<=500)
         {
-            TriangleDirection2 *= -1;
+            TriangleDirection2 += -1;
         }
         if (triangle3X >=0 || triangle3X<=500)
             {
-                TriangleDirection3 *= -1;
+                TriangleDirection3 += -1;
             }    
 
    
@@ -99,7 +103,12 @@ function draw()
     
     // body
     fill(155,0,0);
-    rect(200,285,100,150);
+    rect(200,bodyY,100,150);
+    bodyY += bodyDirection;
+    if (bodyY <=0 || bodyY>= 500)
+    {
+        bodyDirection += -1;
+    }
     
     // decoration
     fill(255);
