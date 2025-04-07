@@ -42,7 +42,7 @@ function draw()
     count++;
     if (count > 3)
     {
-        sizeDirection *=-1;
+        sizeDirection *=-3;
         count = 0;
 
     }
@@ -57,15 +57,15 @@ function draw()
     triangle3X += TriangleDirection3;
     if (triangleX >=150 || triangleX<=300)
     {
-        TriangleDirection1 *= -1;
+        TriangleDirection1 *= -5;
     }
     if (triangle2X >=150|| triangle2X<=400)
         {
-            TriangleDirection2 *= -1;
+            TriangleDirection2 *= -5;
         }
         if (triangle3X >=150 || triangle3X<=400)
             {
-                TriangleDirection3 *= -1;
+                TriangleDirection3 *= -5;
             }    
 
    
