@@ -35,7 +35,7 @@ function draw()
     // nose
     point(noseX,noseY);
     noseX+=noseDirection;
-    if(hoseX >=500 || noseX<= 75)
+    if(noseX >=500 || noseX<= 75)
     {
         noseDirection *= -1;
     }
