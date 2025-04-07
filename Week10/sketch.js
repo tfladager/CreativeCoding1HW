@@ -20,9 +20,9 @@ var sizeDirection = 2;
 var triangleX = 220;
 var triangle2X = 250;
 var triangle3X = 280;
-var TriangleDirection1 = 3;
-var TriangleDirection2 =3;
-var TriangleDirection3 = 3;
+var TriangleDirection1 = 2;
+var TriangleDirection2 =2;
+var TriangleDirection3 = 2;
 
 
 function setup()
@@ -51,15 +51,15 @@ function draw()
     triangleX+= TriangleDirection1;
     triangle2X += TriangleDirection2;
     triangle3X += TriangleDirection3;
-    if (triangleX >=0 || triangleX<=300)
+    if (triangleX >=0 || triangleX<=500)
     {
         TriangleDirection1 *= -1;
     }
-    if (triangle2X >=0 || triangle2X<=300)
+    if (triangle2X >=0 || triangle2X<=500)
         {
             TriangleDirection2 *= -1;
         }
-        if (triangle3X >=0 || triangle3X<=300)
+        if (triangle3X >=0 || triangle3X<=500)
             {
                 TriangleDirection3 *= -1;
             }    
