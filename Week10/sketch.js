@@ -105,7 +105,7 @@ function draw()
     fill(155,0,0);
     rect(200,bodyY,100,150);
     bodyY += bodyDirection;
-    if (bodyY <=150 || bodyY>= 500)
+    if (bodyY <=150 || bodyY>= 300)
     {
         bodyDirection += -1;
     }
