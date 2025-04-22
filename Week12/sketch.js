@@ -26,27 +26,34 @@ var playerX = 50;
     var clickShapeX = 100;
     var clickShapeY = 125;
 
-    function setup()
-{
-    createCanvas(800,600);   
-}       
-     
-function draw()  
-{  
-   
-    //player
-        background (0,200,10);
-        fill(240,100,190);
-        circle(playerX,playerY,75);    
- if(playerX >730 && playerY> 450)
-   {
-     fill (200,10,10);
-     stroke(3);
-     textSize(30);
-     text('Winner!',300,400);
-   }
+
+
+function setup() {
+  createCanvas(800, 600);
+ }
+
+function draw() {
+  background(230, 130, 138);
+
+  athleteCircle();
+   fill (10,20,150);
+   circle(30,38,50);
+    
+   //obstacle
+   athleticSquare();
+   fill (10,200,20);
+   square(100,125,100);  
+   fill (20,100,40);
+   square(150,200,175);
   
-    //planet
+  //click and make something
+       //click to obstacle
+    fill(0,222,13);
+    square(clickShapeX,   clickShapeY,100);
+
+    square(clickShapeX,clickShapeY,100);
+  
+      //planet
         fill(200);
         square(planetX,planetY,75);
       if(planetX >=800 || planetX<=0)
@@ -99,12 +106,44 @@ function draw()
           rockDirection*=-1;
         }
           rock3Y += rockDirection;
+
+
+     
+}
+
+function athleticCircle(x,y,diameter,fill)
+
+{
+  fill(inner_blue);
+  circle(x,y,diameter);
+}
+
+function athleticSquare(x,y,side,fill)
+{
+   square(x,y,20);
+   square(x,y,15);
+}
+
+function athleteCircle()
+{
+  if (keyIsDown(d)) 
+  {
+    x+=5;
+  } 
+  else if (keyIsDown(a)) 
+  {
+    x-=5;
+  }
+  if (keyIsDown(w)) 
+  {
+    y+=1;
+  } 
+  else if (keyIsDown(s)) 
+  {
+    y-=1;
+  }
   
-   //click to obstacle
-    fill(0,222,13);
-    square(clickShapeX, clickShapeY,100);
-  
-  //sign for exit
+    //sign for exit
   fill(100);
   line(730,320,785,375);
   
@@ -114,34 +153,15 @@ function draw()
   fill(222);
   textSize(50);
   text('Exit',640,320); 
-      
-  
-}
 
-function keyPressed() 
-  {
-  if (key == 'd') 
-  {
-    playerX+=15;
-  } 
-  else if (key == 'a') 
-  {
-    playerX-=15;
-  }
-  if (key == 'w') 
-  {
-    playerY+=15;
-  } 
-  else if (key == 's') 
-  {
-    playerY-=15;
-  }
-    
+  
 function mouseClicked()
     {
       clickShapeX = mouseX;
       clickShapeY = mouseY;
     }
+
+
   
   
 }
