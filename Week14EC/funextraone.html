@@ -1,0 +1,101 @@
+var r;
+var g;
+var b;
+
+var x = 60;
+var y = 50;
+var diameter = 25;
+
+var movement = 9;
+
+var playerX = 300;
+var playerY = 300;
+var playerR = 100;
+var playerT = 75;
+var easing = 0.1;
+var speed = 3;
+
+var s = 83;
+var w = 87;
+var a = 65;
+var d = 68;
+
+var targetX = playerX;
+var targetY = playerY;
+
+function setup() {
+  createCanvas(800,600);
+  //random colors
+  r = random(255);
+  g = random(255);
+  b = random(255);
+  
+  diameter = random (35, 70);
+  fill(r, g, b);
+  movement = random(9);
+  //random location
+  for (var i = 0; i < 10; i++) {
+    let x = random(width);
+    let y = random(height);
+    let movement = random(9);
+    
+    circle(x, y, 10);
+    //random color
+    for (let i = r, g, b; i == random; i++) 
+    createCanvas(800,600);
+    r = random(255);
+    g = random(255);
+    b = random(255);
+    noStroke();
+    fill(r, g, b);
+    circle(x, y, diameter);
+
+    //player set up
+function draw()
+    //player
+{ playerX += (targetX - playerX) * easing;
+  playerY += (targetY - playerY) * easing;
+  /*
+  if (overCircle(playerX, playerY, playerR)) {
+    playerX = playerX + random(-speed, speed);
+    playerY = playerY + random(-speed, speed);
+  }
+  */
+}
+  ellipse(playerX,playerY,playerR,playerT); 
+  }
+}
+
+
+//random circles
+function draw()
+{  
+  
+  circle(x,y,diameter);
+    r = random(255);
+    g = random(255);
+    b = random(255);
+    noStroke();
+    fill(r, g, b);
+  if(x >= 800 || x <= 0)
+    {
+      movement*= -1;
+      fill(r,g,b);
+    }
+    
+  x += movement;
+}  
+  
+function overCircle(x, y, r) 
+{
+  if (dist(x, y, mouseX, mouseY) < r) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function mousePressed() {
+  targetX = mouseX;
+  targetY = mouseY;
+}

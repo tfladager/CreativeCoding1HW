@@ -1,0 +1,192 @@
+var r;
+var g;
+var b;
+
+let sew;
+let t;
+let u;
+
+var x =50;
+var y =50;
+var diameter = 50;
+
+var movement = 9;
+
+var playerX = 300;
+var playerY = 300;
+var playerR = 100;
+var playerT = 75;
+var easing = 0.1;
+var speed = 3;
+    
+var s = 83;
+var w = 87;
+var a = 65;
+var d = 68;    
+
+var targetX = playerX;
+var targetY = playerY;
+  
+var clickShapeX = 100;
+var clickShapeY = 125;
+  
+var myXs = [];
+var myYs = [];
+var myDiameters = [];
+
+
+//setup starts here
+      
+    function setup()
+{
+    createCanvas(800,600); 
+    background (100,100,0);
+  
+  //extra credit 14 squares
+   sew = new Square();
+   t = new Square();
+   u = new Square();
+     
+  //random colors
+    redColor = random(255);
+    greenColor = random(255);
+    blueColor = random(255);
+  
+    diameter = random (35,70);
+    fill(redColor,greenColor,blueColor);
+    movement = random(9);
+  //random location
+  for (var i = 0; i < 10; i++) {
+    let x = random(width);
+    let y = random(height);
+    let movement = random(9);
+  
+    circle(x,y,10);
+  }
+  
+      {   redColor = random(255);
+          greenColor = random(255);
+          blueColor = random(255);   }
+      
+  //circles
+  x = random(750);
+  y = random(550);
+  diameter = random(25);
+
+  {
+   x = random(750);
+   y = random(550);
+  diameter = random(25); 
+    for(var i = 0; i<7; i++)
+      {
+        myXs[i] = x;
+        myYs[i] = y;
+        myDiameters[i] = diameter;
+        x += 50;
+        y += 50;
+        diameter += 10;
+      }
+    
+       }
+}           
+
+//setup ended and draw begins
+
+
+function draw()  
+{  
+  //player
+  playerX += (targetX - playerX) * easing;
+  playerY += (targetY - playerY) * easing;
+  /*
+  if (overCircle(playerX, playerY, playerR)) {
+    playerX = playerX + random(-speed, speed);
+    playerY = playerY + random(-speed, speed);
+  }
+  */
+  fill(150,0,1);
+  ellipse(playerX, playerY, playerR, playerT);
+  
+  //extra credit 14 oop squares  
+   sew.display();
+   t.display();
+   u.display();
+  
+  //click to obstacle
+    fill(0,222,13);
+    square(clickShapeX, clickShapeY,100);
+  
+  //sign for exit
+  fill(100);
+  line(730,320,785,375);
+  
+  fill(100);
+  line(730,450,785,400);
+  
+  fill(222);
+  textSize(50);
+  text('Exit',640,320); 
+
+    //exit announcement
+    if(playerX >= 750 && playerY >= 350)
+   {
+     fill (255);
+     stroke(3);
+     textSize(30);
+     text('Winner!',300,400);
+   }
+
+  
+  fill(redColor,greenColor,blueColor);
+  circle(x,y,diameter);
+  for(var i = 0; i<myXs.length; i++)
+    {
+      fill(redColor,greenColor,blueColor);
+      circle(myXs[i],myYs[i],myDiameters[i]);
+    }
+  if(myXs[i] >= 800 || myXs[i] <= 0)
+    {
+        movement *=-1;
+    }
+     
+    myXs[i] +=movement;
+ 
+}
+
+if(playerX >730 && playerY> 450)
+   {
+     fill (200,10,10);
+     stroke(3);
+     textSize(30);
+     text('Winner!',300,400);
+   }
+
+function overCircle(x, y, r) {
+  if (dist(x, y, mouseX, mouseY) < r) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function mousePressed() {
+  targetX = mouseX;
+  targetY = mouseY;}
+
+  class Square{
+  constructor(x,y,size)
+  {
+    this.size = random(0,50);
+    this.x = random(0,width);
+    this.y = random(0,height); 
+  }
+  
+  display() {
+    rectMode(CENTER);
+    fill(redColor,greenColor,blueColor);
+    noStroke();
+    square(this.x, this.y, this.size);
+     
+  }
+  
+  }
